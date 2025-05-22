@@ -1,41 +1,67 @@
+/* === Scroll to Top Button === */
 #topBtn {
   position: fixed;
   bottom: 30px;
   right: 30px;
   display: none;
-  background: #333;
-  color: white;
+  background-color: #222;
+  color: #fff;
   border: none;
   padding: 12px 18px;
   border-radius: 50%;
   font-size: 20px;
   cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s ease, transform 0.2s ease;
   z-index: 999;
 }
 
+#topBtn:hover {
+  background-color: #000;
+  transform: scale(1.1);
+}
+
+/* === Dark Mode Toggle Button === */
 #darkToggle {
   position: fixed;
   bottom: 30px;
   left: 30px;
-  background: #444;
-  color: white;
+  background-color: #333;
+  color: #fff;
   border: none;
-  padding: 10px;
+  padding: 12px;
   border-radius: 50%;
   font-size: 18px;
   cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s ease, transform 0.2s ease;
   z-index: 999;
 }
 
+#darkToggle:hover {
+  background-color: #1c1c1c;
+  transform: scale(1.1);
+}
+
+/* === Dark Mode Styling === */
 body.dark-mode {
   background-color: #121212;
   color: #e0e0e0;
+  transition: background-color 0.4s ease, color 0.4s ease;
 }
 
 body.dark-mode a {
   color: #90caf9;
+  transition: color 0.3s ease;
 }
 
+body.dark-mode header,
+body.dark-mode footer {
+  background-color: #1e1e1e;
+  border-top: 1px solid #2a2a2a;
+}
+
+/* === Fade-in Animations === */
 .fade-in {
   opacity: 0;
   transform: translateY(20px);
@@ -44,6 +70,26 @@ body.dark-mode a {
 
 .fade-in.appear {
   opacity: 1;
-  transform: translateY(0px);
+  transform: translateY(0);
 }
 
+/* === General Typography (Optional Enhancements) === */
+body {
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  letter-spacing: 0.02em;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+a {
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* === Utility: Smooth transitions === */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
