@@ -1,67 +1,236 @@
-/* === Scroll to Top Button === */
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background-color: #fdfdfd;
+  color: #111;
+  transition: background 0.4s, color 0.4s;
+  padding-top: 70px;
+}
+
+a {
+  color: #0077cc;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: #005ea0;
+}
+
+/* Header */
+.site-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #0e1a2b;
+  color: #fff;
+  padding: 1rem 0;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  z-index: 1000;
+}
+
+.site-header .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+/* Nav */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-links li a {
+  color: white;
+  font-weight: 500;
+  padding: 0.4rem 0.6rem;
+  border-radius: 6px;
+}
+
+.nav-links li a.active,
+.nav-links li a:hover {
+  background: #0077cc;
+}
+
+/* Responsive Nav */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: white;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    background: #0e1a2b;
+    top: 60px;
+    right: 0;
+    width: 200px;
+    padding: 1rem;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
+
+/* Main Content */
+.container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 2rem 1rem;
+}
+
+.hero-section h2 span {
+  color: #0077cc;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  cursor: help;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 220px;
+  background-color: #333;
+  color: #fff;
+  text-align: left;
+  border-radius: 6px;
+  padding: 10px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%; 
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Features Section */
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.feature-box {
+  flex: 1 1 300px;
+  padding: 1.5rem;
+  background: #f1f5f9;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+.feature-box:hover {
+  transform: translateY(-5px);
+}
+
+.feature-box h3 {
+  margin-bottom: 0.8rem;
+}
+
+/* Footer */
+.site-footer {
+  background: #0e1a2b;
+  color: white;
+  text-align: center;
+  padding: 1.5rem 1rem;
+  margin-top: 3rem;
+}
+
+/* Scroll to Top Button */
 #topBtn {
   position: fixed;
   bottom: 30px;
   right: 30px;
   display: none;
-  background-color: #222;
-  color: #fff;
+  background: #333;
+  color: white;
   border: none;
   padding: 12px 18px;
   border-radius: 50%;
   font-size: 20px;
   cursor: pointer;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  transition: background-color 0.3s ease, transform 0.2s ease;
   z-index: 999;
 }
 
-#topBtn:hover {
-  background-color: #000;
-  transform: scale(1.1);
-}
-
-/* === Dark Mode Toggle Button === */
+/* Dark Mode Button */
 #darkToggle {
   position: fixed;
   bottom: 30px;
   left: 30px;
-  background-color: #333;
-  color: #fff;
+  background: #444;
+  color: white;
   border: none;
-  padding: 12px;
+  padding: 10px;
   border-radius: 50%;
   font-size: 18px;
   cursor: pointer;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  transition: background-color 0.3s ease, transform 0.2s ease;
   z-index: 999;
 }
 
-#darkToggle:hover {
-  background-color: #1c1c1c;
-  transform: scale(1.1);
-}
-
-/* === Dark Mode Styling === */
+/* Dark Mode */
 body.dark-mode {
   background-color: #121212;
   color: #e0e0e0;
-  transition: background-color 0.4s ease, color 0.4s ease;
 }
 
 body.dark-mode a {
   color: #90caf9;
-  transition: color 0.3s ease;
 }
 
-body.dark-mode header,
-body.dark-mode footer {
-  background-color: #1e1e1e;
-  border-top: 1px solid #2a2a2a;
+body.dark-mode .site-header {
+  background: #1a1a1a;
 }
 
-/* === Fade-in Animations === */
+body.dark-mode .site-footer {
+  background: #1a1a1a;
+}
+
+body.dark-mode .feature-box {
+  background: #1e1e1e;
+}
+
+/* Fade In Animation */
 .fade-in {
   opacity: 0;
   transform: translateY(20px);
@@ -70,26 +239,5 @@ body.dark-mode footer {
 
 .fade-in.appear {
   opacity: 1;
-  transform: translateY(0);
-}
-
-/* === General Typography (Optional Enhancements) === */
-body {
-  font-family: 'Inter', 'Segoe UI', sans-serif;
-  line-height: 1.6;
-  letter-spacing: 0.02em;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-a {
-  transition: color 0.3s ease, text-decoration 0.3s ease;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-/* === Utility: Smooth transitions === */
-*, *::before, *::after {
-  box-sizing: border-box;
+  transform: translateY(0px);
 }
