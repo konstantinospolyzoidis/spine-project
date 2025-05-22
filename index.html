@@ -4,22 +4,21 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>The Spine Project | Home</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="favicon.png" type="image/png" />
 </head>
 <body>
-  <!-- Header / Navbar -->
   <header class="site-header">
     <div class="container">
-      <h1 class="logo">The Spine Project</h1>
-      <nav class="main-nav" aria-label="Main Navigation">
-        <button class="menu-toggle" aria-label="Toggle navigation" onclick="toggleMenu()">☰</button>
-        <ul id="nav-links" class="nav-links">
+      <h1 class="logo">🧠 The Spine Project</h1>
+      <nav>
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+        <ul class="nav-links" id="nav-links">
           <li><a href="index.html" class="active">Home</a></li>
           <li><a href="anatomy.html">Anatomy</a></li>
           <li><a href="physiology.html">Physiology</a></li>
           <li><a href="pathology.html">Pathology</a></li>
-          <li><a href="spine-health.html">Spine Health</a></li>
+          <li><a href="health.html">Spine Health</a></li>
           <li><a href="resources.html">Resources</a></li>
           <li><a href="contact.html">Contact</a></li>
           <li><a href="about.html">About</a></li>
@@ -28,39 +27,40 @@
     </div>
   </header>
 
-  <!-- Main Content -->
   <main class="main-content fade-in">
-    <div class="container">
-      <section class="intro-section">
-        <h2>Welcome to <strong>The Spine Project</strong></h2>
-        <p>
-          Our mission is to educate both medical students and the public about the spine's anatomy, function, common disorders, and strategies for maintaining spinal health.
-        </p>
-        <p class="tooltip">
-          <strong>Did you know?</strong> The human spine consists of 33 vertebrae.
-          <span class="tooltiptext">7 cervical, 12 thoracic, 5 lumbar, 5 fused sacral, and 4 fused coccygeal</span>
-        </p>
-        <p>
-          Use the navigation above to explore detailed sections on anatomy, pathology, rehabilitation, and health tips. Empower your knowledge with evidence-based, structured information.
-        </p>
-      </section>
-    </div>
+    <section class="hero-section container">
+      <h2>Welcome to <span>The Spine Project</span></h2>
+      <p>Educating future doctors and the public about spinal anatomy, disorders, and health optimization.</p>
+      <p class="tooltip">💡 Did you know? The spine has <strong>33 vertebrae</strong>.
+        <span class="tooltiptext">7 cervical, 12 thoracic, 5 lumbar, 5 sacral (fused), 4 coccygeal (fused)</span>
+      </p>
+    </section>
+
+    <section class="container features">
+      <div class="feature-box">
+        <h3>🔬 Anatomy</h3>
+        <p>Explore detailed breakdowns of vertebral regions, discs, ligaments, and spinal cord pathways.</p>
+      </div>
+      <div class="feature-box">
+        <h3>🧬 Pathology</h3>
+        <p>Learn about scoliosis, disc herniation, spinal stenosis, degenerative disc disease, and more.</p>
+      </div>
+      <div class="feature-box">
+        <h3>💪 Health Tips</h3>
+        <p>Understand posture, exercises, sleep ergonomics, and daily habits that protect your spine.</p>
+      </div>
+    </section>
   </main>
 
-  <!-- Footer -->
   <footer class="site-footer">
     <div class="container">
-      <p>&copy; 2025 <strong>The Spine Project</strong>. Created by Konstantinos Polyzoidis. All rights reserved.</p>
+      <p>&copy; 2025 The Spine Project | Built by Konstantinos Polyzoidis</p>
     </div>
   </footer>
 
-  <!-- Back to Top Button -->
-  <button onclick="scrollToTop()" id="topBtn" title="Go to top" aria-label="Back to top">↑</button>
+  <button onclick="scrollToTop()" id="topBtn" title="Back to top">↑</button>
+  <button onclick="toggleDarkMode()" id="darkToggle" title="Toggle Dark Mode">🌓</button>
 
-  <!-- Dark Mode Toggle (Optional) -->
-  <button id="darkToggle" onclick="toggleDarkMode()" title="Toggle dark mode" aria-label="Toggle dark mode">🌓</button>
-
-  <!-- JavaScript -->
-  <script src="script.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>
