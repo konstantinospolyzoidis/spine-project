@@ -2,65 +2,60 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>The Spine Project | Home</title>
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="icon" href="favicon.png" type="image/png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Explore comprehensive information on spine anatomy, pathology, health tips, and more.">
+  <title>The Spine Project</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
 </head>
 <body>
-  <header class="site-header">
-    <div class="container">
+  <header>
+    <div class="container navbar">
       <h1 class="logo">🧠 The Spine Project</h1>
       <nav>
-        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-        <ul class="nav-links" id="nav-links">
-          <li><a href="index.html" class="active">Home</a></li>
-          <li><a href="anatomy.html">Anatomy</a></li>
-          <li><a href="physiology.html">Physiology</a></li>
-          <li><a href="pathology.html">Pathology</a></li>
-          <li><a href="health.html">Spine Health</a></li>
-          <li><a href="resources.html">Resources</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li><a href="about.html">About</a></li>
+        <ul class="nav-links">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Anatomy</a></li>
+          <li><a href="#">Pathology</a></li>
+          <li><a href="#">Spine Health</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">About</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <main class="main-content fade-in">
-    <section class="hero-section container">
-      <h2>Welcome to <span>The Spine Project</span></h2>
-      <p>Educating future doctors and the public about spinal anatomy, disorders, and health optimization.</p>
-      <p class="tooltip">💡 Did you know? The spine has <strong>33 vertebrae</strong>.
-        <span class="tooltiptext">7 cervical, 12 thoracic, 5 lumbar, 5 sacral (fused), 4 coccygeal (fused)</span>
-      </p>
+  <main>
+    <section class="hero">
+      <div class="hero-text">
+        <h2>Understanding the Human Spine</h2>
+        <p>Your trusted resource for spine health, anatomy, pathology, and wellness insights.</p>
+        <a href="#learn-more" class="btn">Learn More</a>
+      </div>
     </section>
 
-    <section class="container features">
-      <div class="feature-box">
-        <h3>🔬 Anatomy</h3>
-        <p>Explore detailed breakdowns of vertebral regions, discs, ligaments, and spinal cord pathways.</p>
-      </div>
-      <div class="feature-box">
-        <h3>🧬 Pathology</h3>
-        <p>Learn about scoliosis, disc herniation, spinal stenosis, degenerative disc disease, and more.</p>
-      </div>
-      <div class="feature-box">
-        <h3>💪 Health Tips</h3>
-        <p>Understand posture, exercises, sleep ergonomics, and daily habits that protect your spine.</p>
+    <section id="learn-more" class="info-section">
+      <div class="container grid">
+        <div class="card">
+          <h3>Anatomy</h3>
+          <p>Explore the vertebrae, discs, and curvature that form the foundation of your spine.</p>
+        </div>
+        <div class="card">
+          <h3>Pathology</h3>
+          <p>Learn about spinal conditions such as herniated discs, scoliosis, and degenerative changes.</p>
+        </div>
+        <div class="card">
+          <h3>Spine Health</h3>
+          <p>Discover exercises, posture tips, and lifestyle habits that protect your spine.</p>
+        </div>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container">
-      <p>&copy; 2025 The Spine Project | Built by Konstantinos Polyzoidis</p>
+  <footer>
+    <div class="container footer-content">
+      <p>&copy; 2025 The Spine Project. All rights reserved.</p>
     </div>
   </footer>
-
-  <button onclick="scrollToTop()" id="topBtn" title="Back to top">↑</button>
-  <button onclick="toggleDarkMode()" id="darkToggle" title="Toggle Dark Mode">🌓</button>
-
-  <script src="js/script.js"></script>
 </body>
 </html>
